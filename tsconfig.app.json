@@ -20,7 +20,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals", "@testing-library/jest-dom/vitest"]
   },
-  "include": ["src", "src/App.test.tsx"]
+  "include": ["src", "src/__tests__/App.test.tsx"]
 }
