@@ -27,7 +27,10 @@ function App() {
 
   return (
     <div className="container p-2 flex flex-col">
-      <div className="min-h-16 flex w-full gap-2 sticky top-0 z-10 bg-white p-2">
+      <header>
+        <h1 className="font-bold text-3xl">RangeMe Flickr</h1>
+      </header>
+      <div className="min-h-16 flex w-full gap-2 sticky top-0 z-10 bg-white py-2">
         <SearchInput onChange={setSearchTerms} />
         <Toggle
           trueLabel="ALL"

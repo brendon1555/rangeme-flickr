@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import Image from "./Image";
+import LinkIcon from "./Link";
 
 interface CardProps {
   image: Image;
@@ -27,31 +28,34 @@ const Card = ({ image }: CardProps) => {
       />
 
       <div className="flex flex-col p-5 flex-1">
-        <p className="mb-2 text-xl font-bold tracking-tight text-gray-900 e">
-          {authorName}
-        </p>
+        <div className="flex justify-between mb-2">
+          <p className="text-xl font-bold tracking-tight text-gray-900">
+            {authorName}
+          </p>
+          <a
+            href={image.link}
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Open image"
+          >
+            <LinkIcon className="w-4 h-4 mt-1" />
+          </a>
+        </div>
         <p className="mb-3 font-medium text-gray-500">
-          {new Date(image.date_taken).toLocaleString()}
+          {new Date(image.date_taken).toLocaleString("en-AU")}
         </p>
-        <div className="flex flex-wrap gap-1 mb-2">
+        <div className="flex flex-wrap gap-1">
           {tags.map((tag) => (
             <span
               key={tag}
               className="rounded-full bg-pink-50 px-2 py-1 text-xs font-medium text-pink-700 ring-1 ring-inset ring-pink-700/10 truncate"
               role="tag"
+              title={tag}
             >
               {tag}
             </span>
           ))}
         </div>
-        <a
-          href={image.link}
-          className="self-start mt-auto inline-flex items-center px-2 py-1 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          View Full Image
-        </a>
       </div>
     </div>
   );

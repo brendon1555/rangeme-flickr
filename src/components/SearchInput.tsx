@@ -40,7 +40,7 @@ const SearchInput = ({ onChange }: SearchInputProps) => {
         autoFocus
       />
       <button onClick={clearSearch} title="Clear Input">
-        <Cross />
+        <Cross className="w-4 h-4" />
       </button>
     </div>
   );

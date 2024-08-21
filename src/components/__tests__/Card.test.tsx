@@ -48,7 +48,7 @@ describe("Card", () => {
 
   it("renders the link to view full image", () => {
     render(<Card image={mockImage} />);
-    const linkElement = screen.getByText("View Full Image");
+    const linkElement = screen.getByTitle("Open image");
 
     expect(linkElement).toBeInTheDocument();
     expect(linkElement).toHaveAttribute("href", "https://example.com/image");

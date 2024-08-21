@@ -1,15 +1,11 @@
-import { twMerge } from "tailwind-merge";
-
 const Cross = ({ className }: { className?: string }) => {
   return (
     <div>
       <svg
-        width="24"
-        height="24"
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1792 1792"
-        className={twMerge("w-4 h-4", className)}
+        className={className}
       >
         <path
           d="M1082.2,896.6l410.2-410c51.5-51.5,51.5-134.6,0-186.1s-134.6-51.5-186.1,0l-410.2,410L486,300.4
