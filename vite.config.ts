@@ -10,7 +10,7 @@ export default defineConfig({
     proxy: {
       // Proxy the requests to the Flickr API as Flickr does not support CORS
       "/images": {
-        target: "https://api.flickr.com/services/feeds/photos_public.gne",
+        target: "https://www.flickr.com/services/feeds/photos_public.gne",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/images/, ""),
       },
