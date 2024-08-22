@@ -39,9 +39,11 @@ const SearchInput = ({ onChange }: SearchInputProps) => {
         className="w-full h-full outline-none font-medium"
         autoFocus
       />
-      <button onClick={clearSearch} title="Clear Input">
-        <Cross className="w-4 h-4" />
-      </button>
+      {searchTerms && (
+        <button onClick={clearSearch} title="Clear Input">
+          <Cross className="w-4 h-4" />
+        </button>
+      )}
     </div>
   );
 };

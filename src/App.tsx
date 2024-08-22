@@ -47,7 +47,11 @@ function App() {
           <Loading />
         </div>
       )}
-      {error && <div>Error: {error}</div>}
+      {error && (
+        <div className="flex justify-center items-center flex-1">
+          Error: {error}
+        </div>
+      )}
       {data && (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-4">
           {data?.items.map((item) => <Card key={item.link} image={item} />)}

@@ -29,9 +29,9 @@ const Card = ({ image }: CardProps) => {
 
       <div className="flex flex-col p-5 flex-1">
         <div className="flex justify-between mb-2">
-          <p className="text-xl font-bold tracking-tight text-gray-900">
+          <span className="text-xl font-bold tracking-tight text-gray-900">
             {authorName}
-          </p>
+          </span>
           <a
             href={image.link}
             target="_blank"
@@ -41,9 +41,9 @@ const Card = ({ image }: CardProps) => {
             <LinkIcon className="w-4 h-4 mt-1" />
           </a>
         </div>
-        <p className="mb-3 font-medium text-gray-500">
+        <span className="mb-3 font-medium text-gray-500">
           {new Date(image.date_taken).toLocaleString("en-AU")}
-        </p>
+        </span>
         <div className="flex flex-wrap gap-1">
           {tags.map((tag) => (
             <span

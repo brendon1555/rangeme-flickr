@@ -1,8 +1,8 @@
 {
-    "rewrites": [
-        {
-            "source": "/images",
-            "destination": "https://www.flickr.com/services/feeds/photos_public.gne"
-        }
-    ]
+  "rewrites": [
+    {
+      "source": "/images",
+      "destination": "https://www.flickr.com/services/feeds/photos_public.gne"
+    }
+  ]
 }
